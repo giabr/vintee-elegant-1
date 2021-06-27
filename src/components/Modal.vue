@@ -5,22 +5,25 @@
       persistent
       fullscreen
     >
-      <v-card id="el-dialog">
-        <v-card-text class="vh-center text-center">
+    <v-card id="el-dialog">
+      <v-card-text data-aos="fade-in" class="vh-center text-center white--text">
 			<h1 class="el-title">Galih &amp; Ratna</h1>
-            <p>Kepada Yth. Bpk/Ibu/Saudara/i</p>
+        <img class="el-img" src="../assets/groom.jpg" alt="" srcset="">
+        <p>Kepada Yth. Bpk/Ibu/Saudara/i</p>
+        <br>
 			<h2>Joko</h2>
-            <br>
+        <br>
 			<p>Tanpa mengurangi rasa hormat , kami mengundang anda untuk hadir di acara pernikahan kami</p>
-            <v-btn
-            color="primary darken-1"
-            dark
-            @click="playMusic()"
-          >
-            Buka Undangan
-          </v-btn>
-        </v-card-text>
-      </v-card>
+        <br>
+        <v-btn
+          style="padding: 6px 16px"
+          color="white"
+          @click="playMusic()"
+        >
+          <h3 class="primary--text" style="text-transform:capitalize">Buka Undangan</h3>
+        </v-btn>
+      </v-card-text>
+    </v-card>
     </v-dialog>
   </v-row>
 </template>
@@ -62,15 +65,28 @@ export default {
         p, h2{
             color: white;
         }
-        h1{
-          padding-bottom: 30px;
-        }
         .vh-center{
           position: absolute;
           left: 50%;
           top: 50%;
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+        }
+        .el-img{
+          height: auto;
+          border-radius: 50%;
+        }
+        @media screen and (min-width: 480px) {
+        .el-img{
+          width: 20%;
+          margin: 50px;
+        }
+        }
+        @media screen and (max-width: 480px) {
+        .el-img{
+          width: 40%;
+          margin: 30px;
+        }
         }        
     }
 </style>

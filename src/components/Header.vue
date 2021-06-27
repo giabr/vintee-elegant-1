@@ -1,10 +1,10 @@
 <template>
     <div id="el-cover">
         <v-container data-aos="fade-in">
-            <div class="el-cover-body text-center">
-                <h3>Undangan Pernikahan</h3>
+            <div class="el-cover-body text-center white--text">
+                <h3 style="font-weight: 400">The wedding of</h3>
                 <h1 class="el-title white--text">Galih &amp; Ratna</h1>
-                <h3>06 April 2022</h3>
+                <h3 style="font-weight: 700">18 . 08 . 2021</h3>
             </div>
         </v-container>
     </div>
@@ -23,24 +23,21 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         height: 100vh;
-        h3 {
-            color: white;
-        }
-        h1 {
+        h1{
             padding: 40px;
         }
-        .el-cover-body{
-            padding-top: 25%;
-        }
         @media screen and (min-width: 480px) {
-        .el-cover-body{
-            padding-top: 25%;
-        }
+            h1{
+            font-size: 75px;
+            }
         }
         @media screen and (max-width: 480px) {
-        .el-cover-body{
-            padding-top: 50%;
+            h1 {
+            font-size: 40px;
+            }
         }
+        .el-cover-body{
+            padding-top: 25%;
         }
     }
 </style>

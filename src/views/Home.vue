@@ -28,14 +28,22 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&display=swap');
 
-  h2, h3, p {
-    font-family: 'Open Sans', sans-serif;
+  h3, p {
+    font-size: 16px;
+  }
+
+  h1, h2, h3, p {
+    font-family: 'Lora', serif;
+  }
+
+  h2 {
+    font-family: 'Lora', serif;
   }
 
   .font {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Dancing Script', cursive;
   }
 
   .animate-box{
@@ -44,7 +52,7 @@ export default {
 
   .el-title{
     // text-transform: uppercase;
-    font-family: 'Sacramento', cursive;
+    font-family: 'Dancing Script', cursive;
     margin: 15px;
   }
   @media screen and (min-width: 480px) {
@@ -54,7 +62,7 @@ export default {
   }
   @media screen and (max-width: 480px) {
     .el-title {
-      font-size: 50px;
+      font-size: 28px;
     }
   }
 </style>

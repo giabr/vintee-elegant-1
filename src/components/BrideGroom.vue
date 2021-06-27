@@ -8,7 +8,10 @@
                     <div data-aos="fade-in">
                         <h3 class="primary--text">Galih Budiono</h3>
                         <p>Putra dari Bapak Sutanto Budiono &amp; Ibu Diana Sukamto</p>
-                        <a href="#" class="primary--text">galihbudiono</a>
+                        <div>
+                            <img class="el-sosmed" src="../assets/ig.svg" alt="" srcset="">
+                            <a href="#" class="primary--text"><span> galihbud</span></a>
+                        </div>                    
                     </div>
                 </v-col>
                 <v-col data-aos="fade-in" class="el-and font primary--text" cols="12" sm="12" md="2">&amp;</v-col>
@@ -17,7 +20,10 @@
                     <div data-aos="fade-in">
                         <h3 class="primary--text">Ratna Putri Valencia</h3>
                         <p>Putra dari Bapak Michael Valencia &amp; Ibu Riri Fatimah</p>
-                        <a href="#" class="primary--text">rpvalen</a>
+                        <div>
+                            <img class="el-sosmed" src="../assets/ig.svg" alt="" srcset="">
+                            <a href="#" class="primary--text"><span> rpvalen</span></a>
+                        </div>
                     </div>
                 </v-col>
             </v-row>
@@ -35,37 +41,46 @@ export default {
 
 #el-bridegroom{
     padding: 10% 0;
-    h1 {
-        padding: 5% 0;
-    }
     p {
         font-size: 14px;
-        padding: 10px 0;
+        padding: 2% 0;
     }
     a {
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
+        margin: 0;
     }
     .el-img{
         height: auto;
         border-radius: 50%;
+    }
+    .el-sosmed{
+        vertical-align: middle;
     }
     @media screen and (min-width: 480px) {
     .el-img{
         width: 60%;
         margin: 50px;
     }
-    }
-    @media screen and (max-width: 480px) {
-    .el-img{
-        width: 40%;
-        margin: 30px;
-    }
-    } 
     .el-and{
         font-size: 100px;
         padding-top: 10%;
     }
+    }
+    @media screen and (max-width: 480px) {
+    .el-img{
+        width: 120px;
+        margin: 30px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .el-and{
+        font-size: 28px;
+        padding-top: 10%;
+    }
+    } 
+
 }
 
 </style>

@@ -23,9 +23,6 @@ export default {
         background-repeat: no-repeat;
         background-position: center;
         height: 100vh;
-        h1{
-            padding: 40px;
-        }
         @media screen and (min-width: 480px) {
             h1{
             font-size: 75px;
@@ -34,6 +31,10 @@ export default {
         @media screen and (max-width: 480px) {
             h1 {
             font-size: 40px;
+            font-weight: 700;
+            }
+            h3 {
+                font-size: 16px;
             }
         }
         .el-cover-body{

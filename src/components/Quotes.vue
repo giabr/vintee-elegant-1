@@ -1,7 +1,7 @@
 <template>
     <div id="el-quotes">
         <v-container class="text-center" data-aos="fade-in">
-            <h3 class="primary--text"><q>Every love story is beautiful, but ours is the best one. I loved her since the first time I saw her. My mother told me to pick the very best one, and I did. True love stories never have endings</q></h3>
+            <h3 class="primary--text"><q>And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect</q><br><br>(QS. Ar-Rum; 21)</h3>
         </v-container>
     </div>
 </template>
@@ -15,6 +15,12 @@ export default {
 
 <style lang="scss" scoped>
     #el-quotes{
+        @media screen and (min-width: 480px) {
         padding-top: 20%;
+        }
+        @media screen and (max-width: 480px) {
+        padding-top: 30%;
+        padding-bottom: 20%;
+        } 
     }
 </style>

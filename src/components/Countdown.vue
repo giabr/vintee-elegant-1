@@ -2,13 +2,7 @@
     <div id="el-countdown">
         <v-container class="text-center white--text">
             <h1 class="el-title" data-aos="fade-in">18 Agustus 2021</h1>
-            <v-btn data-aos="fade-in"
-            class="el-btn"
-            color="primary darken-1"
-            rounded
-            dark>
-                <h2 class="font">Save the date</h2>
-            </v-btn>
+            <img class="el-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
             <vue-countdown :time="getInterval(now, hday)" v-slot="{ days, hours, minutes, seconds }">
                 <v-row class="el-timer">
                     <v-col>
@@ -64,28 +58,48 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    .el-title{
-        padding: 70px;
-    }
     @media screen and (min-width: 480px) {
     .el-timer{
-        font-size: 30px;
+        h1 {
+            font-size: 50px;
         }
+        p {
+            font-size: 24px;
+        }
+    }
     .el-btn{
         font-size: 50px;
         padding: 40px;
         margin-bottom: 10%;
         }
+    .el-img{
+        width: 240px;
+        height: auto;
+        margin: 50px;
+    }
     }
 
     @media screen and (max-width: 480px) {
     .el-timer{
-        font-size: 14px;
+        h1 {
+            font-size: 24px;
         }
+        p {
+            font-size: 14px;
+        }
+    }
     .el-btn{
         font-size: 30px;
         padding: 25px;
         margin-bottom: 20%;
+    }
+    .el-title{
+        font-size: 28px;
+    }
+    .el-img{
+        width: 100px;
+        height: auto;
+        margin: 30px;
     }
     }
     .el-btn{

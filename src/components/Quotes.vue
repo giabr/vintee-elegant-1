@@ -1,5 +1,5 @@
 <template>
-    <div id="el-quotes">
+    <div id="el-quotes" class="grey">
         <v-container class="text-center" data-aos="fade-in">
             <h3 class="primary--text"><q>And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect</q><br><br>(QS. Ar-Rum; 21)</h3>
         </v-container>

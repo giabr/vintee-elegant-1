@@ -1,5 +1,5 @@
 <template>
-    <div id="el-event">
+    <div id="el-event" class="grey">
         <v-container class="text-center">
             <h1 data-aos="fade-in" class="el-title">Rabu, 18 Agustus 2021</h1>
             <br>

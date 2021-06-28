@@ -8,6 +8,7 @@
     <event-page />
     <protocol-page />
     <live-page />
+    <donate-page />
   </div>
 </template>
 
@@ -20,10 +21,10 @@ import Countdown from '../components/Countdown.vue'
 import Event from '../components/Event.vue'
 import Protocol from '../components/Protocol.vue'
 import Live from '../components/Live.vue'
+import Donate from '../components/Donate.vue'
 
 export default {
   name: 'Home',
-
   components: {
     HeadPage : Head,
     ModalPage : Modal,
@@ -32,7 +33,8 @@ export default {
     CountdownPage : Countdown,
     EventPage : Event,
     ProtocolPage : Protocol,
-    LivePage : Live
+    LivePage : Live,
+    DonatePage : Donate
   },
 }
 </script>
@@ -70,6 +72,9 @@ export default {
     .el-title {
       font-size: 28px;
       margin: 30px 0;
+    }
+    h3, p {
+    font-size: 14px;
     }
   }
 </style>

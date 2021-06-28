@@ -1,5 +1,5 @@
 <template>
-    <div id="el-protocol">
+    <div id="el-protocol" class="grey">
         <v-container class="text-center">
             <h1 class="el-title primary--text" data-aos="fade-in">Protokol kesehatan</h1>
             <br>

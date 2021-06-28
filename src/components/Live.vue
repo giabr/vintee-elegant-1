@@ -1,5 +1,5 @@
 <template>
-    <div id="el-live">
+    <div id="el-live" class="grey">
         <v-container class="text-center">
             <h1 data-aos="fade-in" class="el-title primary--text">Live streaming</h1>
             <p data-aos="fade-in">Karenakan terbatasnya jumlah tamu yang diperbolehkan mengikuti Pernikahan, kami mengundang Anda untuk mengikuti jalannya pernikahan melalui Live Streaming.</p>

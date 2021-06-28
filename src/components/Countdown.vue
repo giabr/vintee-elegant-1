@@ -1,6 +1,6 @@
 <template>
     <div id="el-countdown">
-        <v-container class="text-center white--text">
+        <v-container class="text-center primary--text">
             <h1 class="el-title" data-aos="fade-in">18 Agustus 2021</h1>
             <img class="el-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
             <vue-countdown :time="getInterval(now, hday)" v-slot="{ days, hours, minutes, seconds }">
@@ -53,7 +53,7 @@ export default {
 
 #el-countdown{
     padding: 10% 0;
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img_bg_3.jpg");
+    background:url("../assets/bg-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

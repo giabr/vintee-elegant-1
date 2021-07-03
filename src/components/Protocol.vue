@@ -3,7 +3,7 @@
         <v-container class="text-center">
             <h1 class="el-title primary--text" data-aos="fade-in">Protokol kesehatan</h1>
             <br>
-            <v-row>
+            <v-row class="dark--text">
                 <v-col cols="4" data-aos="fade-in">
                     <img src="../assets/soap.svg" alt="">
                     <p>Cuci Tangan</p>
@@ -30,17 +30,17 @@ export default {
 <style lang="scss" scoped>
 #el-protocol{
     padding: 10% 0;
-    @media screen and (min-width: 480px) {
-        img {
-            width: 100px;
-            padding-bottom: 30px;
-        }
-        p {
-            font-size: 18px;
-        }
+    img {
+        width: 100px;
+        padding-bottom: 30px;
     }
-    @media screen and (max-width: 480px) {
+    p {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 720px) {
+        padding: 10% 5%;
         img {
+            width: 50px;
             padding-bottom: 10px;
         }
     }

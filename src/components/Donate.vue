@@ -1,25 +1,25 @@
 <template>
     <div id="el-donate">
     <div class="el-intro">
-        <v-container class="text-center">
-            <h1 data-aos="fade-in" class="el-title dark--text">You are invited</h1>
+        <v-container class="text-center dark--text">
+            <h1 data-aos="fade-in" class="el-title">You are invited</h1>
             <p data-aos="fade-in">Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu pada kedua mempelai.</p>
             <br>
             <br>
-            <p data-aos="fade-in">Dari kami yang berbahagia<br>Keluarga besar Galih dan Ratna</p>
+            <p data-aos="fade-in">Dari kami yang berbahagia<br>Keluarga besar {{data.groom.nickname}} dan {{data.bride.nickname}}</p>
         </v-container>
     </div>
     <div class="el-bank grey">
-        <v-container class="white">
+        <v-container class="white el-rek dark--text">
             <p data-aos="fade-in" class="text-center">Apabila memberi merupakan tanda doa restu dan ungkapan terima kasih anda, kami dapat menerima kado dalam bentuk non-tunai.</p>
             <br>
             <v-row data-aos="fade-in">
                 <v-col cols="6">
-                    <img class="el-img" src="../assets/bank-logo.png" alt="" srcset="">
+                    <img class="el-img" :src="data.bank.imgUrl" alt="" srcset="">
                 </v-col>
                 <v-col cols="6">
-                    <p>1340009985515</p>
-                    <p>Ratna Putri Valencia</p>
+                    <p>{{data.bank.debit}}</p>
+                    <p>{{data.bank.name}}</p>
                     <br>
                     <v-btn
                         color="primary"
@@ -37,7 +37,9 @@
 
 <script>
 export default {
-
+    props: {
+        data: Object
+    }
 }
 </script>
 
@@ -55,17 +57,26 @@ export default {
         padding-top: 5%;
         padding-bottom: 10%;
     }
+    .el-rek{
+        padding: 15%;
+    }
     .el-img{
         width: 250px;
         height: auto;
         float: right;
     }
-        @media screen and (max-width: 480px) {
+    @media screen and (max-width: 720px) {
+        .el-intro{
+            padding: 10% 5%;
+        }
         .el-bank{
             padding: 5% 5% 10% 5%;
         }
         .el-img{
             width: 125px;
+        }
+        .el-rek{
+        padding: 10% 5%;
         }
     }
 }

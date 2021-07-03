@@ -1,7 +1,7 @@
 <template>
     <div id="el-countdown">
         <v-container class="text-center primary--text">
-            <h1 class="el-title" data-aos="fade-in">18 Agustus 2021</h1>
+            <h1 class="el-title" data-aos="fade-in">{{formatDate(data)}}</h1>
             <img class="el-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
             <vue-countdown :time="getInterval(now, hday)" v-slot="{ days, hours, minutes, seconds }">
                 <v-row class="el-timer">
@@ -29,19 +29,27 @@
 
 <script>
 import VueCountdown from '@chenfengyuan/vue-countdown';
+import formatDateIndo from 'node-format-date';
 
 export default {
     data(){
         return{
             now: new Date(),
-            hday: new Date('2022-04-06'),
+            hday: new Date(this.data),
         }
+    },
+    props: {
+        data: String
     },
     methods: {
         getInterval(now, next){
             var time = next - now
             return time
+        },
+        formatDate(date){
+            return formatDateIndo.formatDate(date)
         }
+
     },
     components: {
         VueCountdown
@@ -58,7 +66,6 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    @media screen and (min-width: 480px) {
     .el-timer{
         h1 {
             font-size: 50px;
@@ -77,9 +84,11 @@ export default {
         height: auto;
         margin: 50px;
     }
+    .el-btn{
+        text-transform: capitalize;
     }
-
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 720px) {
+    padding: 10% 5%;
     .el-timer{
         h1 {
             font-size: 24px;
@@ -101,9 +110,6 @@ export default {
         height: auto;
         margin: 30px;
     }
-    }
-    .el-btn{
-        text-transform: capitalize;
     }
 }
 

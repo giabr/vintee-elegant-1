@@ -1,34 +1,47 @@
 <template>
-    <div id="el-cover">
+    <div id="el-cover" v-bind:style="{
+        background:'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + data.cover + ')',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        height: '900px'
+        }">
         <v-container data-aos="fade-in">
             <div class="el-cover-body text-center white--text">
                 <h3 style="font-weight: 400">The wedding of</h3>
-                <h1 class="el-title white--text">Galih &amp; Ratna</h1>
-                <h3 style="font-weight: 700">18 . 08 . 2021</h3>
+                <h1 class="el-title white--text">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
+                <h3 style="font-weight: 700">{{getDate(data.hday)}}</h3>
             </div>
         </v-container>
     </div>
 </template>
 
 <script>
-export default {
+import dateFormat from 'dateformat';
 
+export default {
+    props : {
+        data: Object
+    },
+    methods: {
+        getDate(date){
+            var temp = new Date(date)
+            var newDate = dateFormat(temp, "dd . mm . yy")
+            return newDate
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
     #el-cover{
-        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img_bg_2.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100vh;
-        @media screen and (min-width: 480px) {
-            h1{
-            font-size: 75px;
-            }
+        h1{
+        font-size: 75px;
         }
-        @media screen and (max-width: 480px) {
+        .el-cover-body{
+            padding-top: 25%;
+        }
+        @media screen and (max-width: 720px) {
             h1 {
             font-size: 40px;
             font-weight: 700;
@@ -36,9 +49,6 @@ export default {
             h3 {
                 font-size: 16px;
             }
-        }
-        .el-cover-body{
-            padding-top: 25%;
         }
     }
 </style>

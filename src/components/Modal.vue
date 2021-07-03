@@ -8,16 +8,16 @@
     >
     <v-card id="el-dialog">
       <v-card-text data-aos="fade-in" class="vh-center text-center dark--text">
-			<h1 class="el-title">Galih &amp; Ratna</h1>
+			<h1 class="el-title">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
       <div class="el-parent" data-aos="fade-in">
-        <img class="el-img el-decor-back" src="../assets/groom.jpg" alt="" srcset="">
+        <img class="el-img el-circle el-decor-back" :src="data.cover" alt="" srcset="">
         <img class="el-img el-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
       </div>
       <br>
       <br>
         <p style="font-weight:bold">Kepada Yth. Bpk/Ibu/Saudara/i</p>
         <br>
-			<h2>Joko</h2>
+			<h2>{{guest}}</h2>
         <br>
 			<p>Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir di acara pernikahan kami</p>
         <br>
@@ -42,6 +42,10 @@ export default {
         return{
             dialog: true,
         }
+    },
+    props:{
+      data: Object,
+      guest: String
     },
     methods: {
       playMusic(){
@@ -73,6 +77,10 @@ export default {
           top: 0;
           left: 0;
         }
+        .el-circle{
+          object-fit: cover;
+          height: 200px;
+        }
         .el-decor-back {
           position: relative;
           border-radius: 50%;
@@ -95,19 +103,15 @@ export default {
           transform: translate(-50%, -50%);
         }
         .el-img{
-          height: auto;
-          // border-radius: 50%;
-        }
-        @media screen and (min-width: 480px) {
-        .el-img{
           width: 200px;
-          // margin: 50px;
         }
-        }
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 720px) {
         .el-img{
           width: 136px;
           // margin: 30px;
+        }
+        .el-circle{
+          height: 136px;
         }
         h1{
           font-size: 40px;

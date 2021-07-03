@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.1.5",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "dateformat": "^4.5.1",
     "howler": "^2.2.1",
+    "mongoose": "^5.13.0",
+    "node-format-date": "^1.0.9",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0"

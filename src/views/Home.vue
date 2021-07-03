@@ -1,14 +1,16 @@
 <template>
   <div>
-    <head-page />
-    <modal-page />   
-    <quotes-page /> 
-    <bride-groom-page />
-    <countdown-page />
-    <event-page />
+    <head-page :data="client" />
+    <modal-page :data="client" :guest="guest" />   
+    <quotes-page :data="client.quote" /> 
+    <bride-groom-page :data="client" />
+    <countdown-page :data="client.hday" />
+    <event-page :data="client.event" />
     <protocol-page />
-    <live-page />
-    <donate-page />
+    <live-page :data="client.live" />
+    <donate-page :data="client" />
+    <guest-page />
+    <message-list-page />
   </div>
 </template>
 
@@ -22,6 +24,11 @@ import Event from '../components/Event.vue'
 import Protocol from '../components/Protocol.vue'
 import Live from '../components/Live.vue'
 import Donate from '../components/Donate.vue'
+import Guest from '../components/Guest.vue'
+import MessageList from '../components/MessageList.vue'
+
+import axios from 'axios'
+import {api, userid} from '../db'
 
 export default {
   name: 'Home',
@@ -34,8 +41,20 @@ export default {
     EventPage : Event,
     ProtocolPage : Protocol,
     LivePage : Live,
-    DonatePage : Donate
+    DonatePage : Donate,
+    GuestPage : Guest,
+    MessageListPage: MessageList
   },
+  data(){
+    return {
+      client: null,
+      guest: this.$route.params.guest
+    }
+  },
+  mounted(){
+    axios.get(api + `/api/user/${userid}`)
+    .then(response => (this.client = response.data))
+  }
 }
 </script>
 <style lang="scss">
@@ -55,20 +74,19 @@ export default {
   .font {
     font-family: 'Dancing Script', cursive;
   }
+  .font-text {
+    font-family: 'Lora', serif;
+  }
   .animate-box{
     opacity: 0;
   }
   .el-title{
     // text-transform: uppercase;
     font-family: 'Dancing Script', cursive;
+    font-size: 75px;
+    margin: 30px 0;
   }
-  @media screen and (min-width: 480px) {
-    .el-title{
-      font-size: 75px;
-      margin: 30px 0;
-    }
-  }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 720px) {
     .el-title {
       font-size: 28px;
       margin: 30px 0;

@@ -10,7 +10,7 @@
     <live-page :data="client.live" />
     <donate-page :data="client" />
     <guest-page />
-    <message-list-page />
+    <gallery-page />
   </div>
 </template>
 
@@ -25,7 +25,7 @@ import Protocol from '../components/Protocol.vue'
 import Live from '../components/Live.vue'
 import Donate from '../components/Donate.vue'
 import Guest from '../components/Guest.vue'
-import MessageList from '../components/MessageList.vue'
+import Gallery from '../components/Gallery.vue'
 
 import axios from 'axios'
 import {api, userid} from '../db'
@@ -43,7 +43,7 @@ export default {
     LivePage : Live,
     DonatePage : Donate,
     GuestPage : Guest,
-    MessageListPage: MessageList
+    GalleryPage : Gallery
   },
   data(){
     return {
@@ -80,14 +80,14 @@ export default {
   .animate-box{
     opacity: 0;
   }
-  .el-title{
+  .vt-title{
     // text-transform: uppercase;
     font-family: 'Dancing Script', cursive;
     font-size: 75px;
     margin: 30px 0;
   }
   @media screen and (max-width: 720px) {
-    .el-title {
+    .vt-title {
       font-size: 28px;
       margin: 30px 0;
     }

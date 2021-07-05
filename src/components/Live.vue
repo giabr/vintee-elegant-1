@@ -1,7 +1,7 @@
 <template>
-    <div id="el-live" class="grey">
+    <div id="vt-live" class="grey">
         <v-container class="text-center">
-            <h1 data-aos="fade-in" class="el-title primary--text">Live streaming</h1>
+            <h1 data-aos="fade-in" class="vt-title primary--text">Live streaming</h1>
             <p class="dark--text" data-aos="fade-in">Karenakan terbatasnya jumlah tamu yang diperbolehkan mengikuti Pernikahan, kami mengundang Anda untuk mengikuti jalannya pernikahan melalui Live Streaming.</p>
             <br>
             <v-row data-aos="fade-in">
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#el-live{
+#vt-live{
     padding: 10% 0;
     background-image: url("../assets/live-decor.svg");
     background-position: left top;

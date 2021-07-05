@@ -9,14 +9,21 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.1.5",
+    "@splidejs/splide": "^2.4.21",
+    "@splidejs/vue-splide": "^0.3.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "dateformat": "^4.5.1",
     "howler": "^2.2.1",
+    "jquery": "^3.6.0",
     "mongoose": "^5.13.0",
     "node-format-date": "^1.0.9",
+    "slick-vuejs": "^1.0.9",
     "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
     "vue-router": "^3.2.0",
+    "vue-slick": "^1.1.16",
+    "vue-slick-carousel": "^1.0.6",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {

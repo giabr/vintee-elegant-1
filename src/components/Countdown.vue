@@ -1,10 +1,10 @@
 <template>
-    <div id="el-countdown">
+    <div id="vt-countdown">
         <v-container class="text-center primary--text">
-            <h1 class="el-title" data-aos="fade-in">{{formatDate(data)}}</h1>
-            <img class="el-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
+            <h1 class="vt-title" data-aos="fade-in">{{formatDate(data)}}</h1>
+            <img class="vt-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
             <vue-countdown :time="getInterval(now, hday)" v-slot="{ days, hours, minutes, seconds }">
-                <v-row class="el-timer">
+                <v-row class="vt-timer">
                     <v-col>
                         <h1>{{ days }}</h1>
                         <p>Hari</p>
@@ -59,14 +59,14 @@ export default {
 
 <style lang="scss" scoped>
 
-#el-countdown{
+#vt-countdown{
     padding: 10% 0;
     background:url("../assets/bg-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    .el-timer{
+    .vt-timer{
         h1 {
             font-size: 50px;
         }
@@ -74,22 +74,22 @@ export default {
             font-size: 24px;
         }
     }
-    .el-btn{
+    .vt-btn{
         font-size: 50px;
         padding: 40px;
         margin-bottom: 10%;
         }
-    .el-img{
+    .vt-img{
         width: 240px;
         height: auto;
         margin: 50px;
     }
-    .el-btn{
+    .vt-btn{
         text-transform: capitalize;
     }
     @media screen and (max-width: 720px) {
     padding: 10% 5%;
-    .el-timer{
+    .vt-timer{
         h1 {
             font-size: 24px;
         }
@@ -97,15 +97,15 @@ export default {
             font-size: 14px;
         }
     }
-    .el-btn{
+    .vt-btn{
         font-size: 30px;
         padding: 25px;
         margin-bottom: 20%;
     }
-    .el-title{
+    .vt-title{
         font-size: 28px;
     }
-    .el-img{
+    .vt-img{
         width: 100px;
         height: auto;
         margin: 30px;

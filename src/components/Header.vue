@@ -1,5 +1,5 @@
 <template>
-    <div id="el-cover" v-bind:style="{
+    <div id="vt-cover" v-bind:style="{
         background:'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + data.cover + ')',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
@@ -7,9 +7,9 @@
         height: '900px'
         }">
         <v-container data-aos="fade-in">
-            <div class="el-cover-body text-center white--text">
+            <div class="vt-cover-body text-center white--text">
                 <h3 style="font-weight: 400">The wedding of</h3>
-                <h1 class="el-title white--text">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
+                <h1 class="vt-title white--text">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
                 <h3 style="font-weight: 700">{{getDate(data.hday)}}</h3>
             </div>
         </v-container>
@@ -34,11 +34,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #el-cover{
+    #vt-cover{
         h1{
         font-size: 75px;
         }
-        .el-cover-body{
+        .vt-cover-body{
             padding-top: 25%;
         }
         @media screen and (max-width: 720px) {

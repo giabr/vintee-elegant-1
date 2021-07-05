@@ -1,5 +1,5 @@
 <template>
-    <div id="el-quotes" class="grey">
+    <div id="vt-quotes" class="grey">
         <v-container class="text-center" data-aos="fade-in">
             <h3 class="primary--text"><q>{{data.words}}</q><br><br>{{data.author}}</h3>
         </v-container>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #el-quotes{
+    #vt-quotes{
         padding-top: 20%;
         @media screen and (max-width: 720px) {
             padding-top: 30%;

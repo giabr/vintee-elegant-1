@@ -6,12 +6,12 @@
       persistent
       fullscreen
     >
-    <v-card id="el-dialog">
+    <v-card id="vt-dialog">
       <v-card-text data-aos="fade-in" class="vh-center text-center dark--text">
-			<h1 class="el-title">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
-      <div class="el-parent" data-aos="fade-in">
-        <img class="el-img el-circle el-decor-back" :src="data.cover" alt="" srcset="">
-        <img class="el-img el-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
+			<h1 class="vt-title">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
+      <div class="vt-parent" data-aos="fade-in">
+        <img class="vt-img vt-circle vt-decor-back" :src="data.cover" alt="" srcset="">
+        <img class="vt-img vt-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
       </div>
       <br>
       <br>
@@ -65,27 +65,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #el-dialog{
+    #vt-dialog{
         background:url("../assets/bg.jpg");
         height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        .el-parent {
+        .vt-parent {
           position: relative;
           top: 0;
           left: 0;
         }
-        .el-circle{
+        .vt-circle{
           object-fit: cover;
           height: 200px;
         }
-        .el-decor-back {
+        .vt-decor-back {
           position: relative;
           border-radius: 50%;
         }
-        .el-decor-front {
+        .vt-decor-front {
           position: absolute;
           left: 50%;
           top: 90%;
@@ -102,15 +102,15 @@ export default {
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
         }
-        .el-img{
+        .vt-img{
           width: 200px;
         }
         @media screen and (max-width: 720px) {
-        .el-img{
+        .vt-img{
           width: 136px;
           // margin: 30px;
         }
-        .el-circle{
+        .vt-circle{
           height: 136px;
         }
         h1{

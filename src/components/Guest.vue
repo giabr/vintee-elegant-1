@@ -1,31 +1,36 @@
 <template>
-    <div id="el-guest" class="grey">
+    <div id="vt-guest" class="grey">
         <v-container class="text-center">
-            <h1 class="el-title primary--text text-center">Buku tamu</h1>
-            <p style="text-align:left" class="dark--text">Nama</p>
-            <v-text-field
-            class="font-text dark--text"
-            v-model="name"
-            outlined
-            clearable
-            ></v-text-field>
-            <p style="text-align:left" class="dark--text">Pesan</p>
-            <v-textarea
-            class="font-text dark--text"
-            outlined
-            clearable
-            v-model="message"
-            ></v-textarea>
-            <v-row style="margin:5% 0">
-                <v-col @click="hadir(true)" class="el-select-left" v-bind:class="{active: attend, primary: attend}">
+            <h1 class="vt-title primary--text text-center" data-aos="fade-in">Buku tamu</h1>
+            <div data-aos="fade-in">
+                <p style="text-align:left" class="dark--text">Nama</p>
+                <v-text-field
+                class="font-text dark--text"
+                v-model="name"
+                outlined
+                clearable
+                ></v-text-field>
+            </div>
+            <div data-aos="fade-in">
+                <p style="text-align:left" class="dark--text">Pesan</p>
+                <v-textarea
+                class="font-text dark--text"
+                outlined
+                clearable
+                v-model="message"
+                ></v-textarea>
+            </div>
+            <v-row style="margin:5% 0" data-aos="fade-in">
+                <v-col @click="hadir(true)" class="vt-select-left" v-bind:class="{active: attend, primary: attend}">
                     <p>Hadir</p>
                 </v-col>
-                <v-col @click="hadir(false)" class="el-select-right" v-bind:class="{active: !attend, primary: !attend}">
+                <v-col @click="hadir(false)" class="vt-select-right" v-bind:class="{active: !attend, primary: !attend}">
                     <p>Tidak hadir</p>
                 </v-col>
             </v-row>
             <br>
             <v-btn
+            data-aos="fade-in"
             color="primary"
             @click="postMessage()"
             elevation="0"
@@ -50,6 +55,7 @@
             </template>
             </v-snackbar>
         </v-container>
+        <message-list :list="guest" />
     </div>
 </template>
 
@@ -57,6 +63,7 @@
 
 import axios from 'axios'
 import {api, userid} from '../db'
+import MessageList from './MessageList.vue'
 
 export default {
     data(){
@@ -68,6 +75,9 @@ export default {
             snackbar: false,
             timeout: 5000
         }
+    },
+    components: {
+        MessageList
     },
     methods: {
         hadir(value){
@@ -89,6 +99,11 @@ export default {
             this.name = "tulis nama kamu disini...",
             this.message = "tulis pesan kamu disini...",
             this.snackbar = true
+            this.fetchPost()
+        },
+        fetchPost(){
+            axios.get(api + `/api/guest/${userid}`)
+            .then(response => (this.guest = response.data))
         }
 
     },
@@ -101,19 +116,19 @@ export default {
 
 <style lang="scss" scoped>
 
-#el-guest{
+#vt-guest{
     padding: 10% 30%;
     .active{
         color: white;
     }
-    .el-select-left{
+    .vt-select-left{
         border-style: solid;
         border-width: 1px 0px 1px 1px;
         border-color: grey;
         border-radius: 4px 0px 0 4px;
         cursor: pointer;
     }
-    .el-select-right{
+    .vt-select-right{
         border-style: solid;
         border-width: 1px;
         border-color: grey;

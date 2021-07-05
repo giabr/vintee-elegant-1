@@ -1,7 +1,7 @@
 <template>
-    <div id="el-protocol" class="grey">
+    <div id="vt-protocol" class="grey">
         <v-container class="text-center">
-            <h1 class="el-title primary--text" data-aos="fade-in">Protokol kesehatan</h1>
+            <h1 class="vt-title primary--text" data-aos="fade-in">Protokol kesehatan</h1>
             <br>
             <v-row class="dark--text">
                 <v-col cols="4" data-aos="fade-in">
@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#el-protocol{
+#vt-protocol{
     padding: 10% 0;
     img {
         width: 100px;

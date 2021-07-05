@@ -1,16 +1,16 @@
 <template>
-    <div id="el-event" class="grey">
+    <div id="vt-event" class="grey">
         <v-container class="text-center">
-            <h1 data-aos="fade-in" class="el-title dark--text">Acara</h1>
+            <h1 data-aos="fade-in" class="vt-title dark--text">Acara</h1>
             <br>
             <v-row>
                 <v-col data-aos="fade-in" cols="12" md="6" sm="12">
                     <h2 class="primary--text">{{data.place1.name}}</h2>
-                    <p class="el-time dark--text">{{formatDate(data.place1.time.date)}} . {{data.place1.time.clock}}</p>
+                    <p class="vt-time dark--text">{{formatDate(data.place1.time.date)}} . {{data.place1.time.clock}}</p>
                     <h3 class="dark--text">{{data.place1.location.name}}</h3>
                     <p class="dark--text">{{data.place1.location.street}}</p>
                     <v-btn
-                    class="el-btn"
+                    class="vt-btn"
                     color="primary"
                     outlined
                     >
@@ -20,11 +20,11 @@
                 </v-col>
                 <v-col data-aos="fade-in" cols="12" md="6" sm="12">
                     <h2 class="primary--text">{{data.place2.name}}</h2>
-                    <p class="el-time dark--text">{{formatDate(data.place2.time.date)}} . {{data.place2.time.clock}}</p>
+                    <p class="vt-time dark--text">{{formatDate(data.place2.time.date)}} . {{data.place2.time.clock}}</p>
                     <h3 class="dark--text">{{data.place2.location.name}}</h3>
                     <p class="dark--text">{{data.place2.location.street}}</p>
                     <v-btn
-                    class="el-btn"
+                    class="vt-btn"
                     color="primary"
                     outlined
                     >
@@ -53,15 +53,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#el-event{
+#vt-event{
     padding: 10% 0;
     background-image: url("../assets/event-decor.svg");
     background-position: right bottom;
     background-size: 20% auto;
-    .el-time{
+    .vt-time{
         padding: 10px 0;
     }
-    .el-btn{
+    .vt-btn{
         margin: 20px 0;
         span {
             font-size:12px;

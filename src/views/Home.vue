@@ -10,7 +10,9 @@
     <live-page :data="client.live" />
     <donate-page :data="client" />
     <guest-page />
-    <gallery-page />
+    <gallery-page :images="client.gallery" />
+    <!-- footer -->
+    <footer-page/>
   </div>
 </template>
 
@@ -26,6 +28,8 @@ import Live from '../components/Live.vue'
 import Donate from '../components/Donate.vue'
 import Guest from '../components/Guest.vue'
 import Gallery from '../components/Gallery.vue'
+
+import Footer from '../components/Footer/Footer.vue'
 
 import axios from 'axios'
 import {api, userid} from '../db'
@@ -43,7 +47,8 @@ export default {
     LivePage : Live,
     DonatePage : Donate,
     GuestPage : Guest,
-    GalleryPage : Gallery
+    GalleryPage : Gallery,
+    FooterPage: Footer
   },
   data(){
     return {

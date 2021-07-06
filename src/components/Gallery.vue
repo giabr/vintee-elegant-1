@@ -20,14 +20,11 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
 export default {
+    props: {
+        images: Array
+    },
     data(){
         return{
-            images: [
-                'https://images.pexels.com/photos/3352398/pexels-photo-3352398.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                'https://images.pexels.com/photos/4334414/pexels-photo-4334414.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                'https://images.pexels.com/photos/936225/pexels-photo-936225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-            ],
             primaryOptions: {
                 type: 'loop',
                 pagination: false,
@@ -49,6 +46,7 @@ export default {
                 fixedHeight: 120,
                 cover: true,
                 arrows: false,
+                gap: '1rem',
                 focus: 'center',
                 isNavigation: true,
                 autoplay: true,

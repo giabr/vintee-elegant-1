@@ -43,6 +43,9 @@ export default {
             width: 50px;
             padding-bottom: 10px;
         }
+        p{
+            font-size: 14px;
+        }
     }
 }
 </style>

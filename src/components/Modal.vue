@@ -21,12 +21,13 @@
         <br>
 			<p>Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir di acara pernikahan kami</p>
         <br>
+        <br>
         <v-btn
           color="white"
           elevation="0"
           @click="playMusic()"
         >
-          <h3 class="primary--text" style="font-size:12px;text-transform:none">Buka undangan</h3>
+          <h3 class="primary--text vt-btn-text">Buka undangan</h3>
         </v-btn>
       </v-card-text>
     </v-card>
@@ -91,9 +92,6 @@ export default {
           top: 90%;
           -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-        }
-        p{
-          font-size: 16px;
         }
         .vh-center{
           position: absolute;

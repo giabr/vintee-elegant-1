@@ -34,17 +34,11 @@ export default {
         width: 100px;
         padding-bottom: 30px;
     }
-    p {
-        font-size: 18px;
-    }
     @media screen and (max-width: 720px) {
         padding: 10% 5%;
         img {
             width: 50px;
             padding-bottom: 10px;
-        }
-        p{
-            font-size: 14px;
         }
     }
 }

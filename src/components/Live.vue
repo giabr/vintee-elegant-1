@@ -45,15 +45,9 @@ export default {
         vertical-align: middle;
          width: 30px;
     }
-    span {
-        font-size: 18px;
-    }
     @media screen and (max-width: 720px) {
         background-size: 30% auto;
         padding: 10% 5%;
-        p, span {
-            font-size: 14px;
-        }
         img {
             width: 20px;
         }

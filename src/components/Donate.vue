@@ -18,8 +18,8 @@
                     <img class="vt-img" :src="data.bank.imgUrl" alt="" srcset="">
                 </v-col>
                 <v-col cols="6">
-                    <p>{{data.bank.debit}}</p>
-                    <p>{{data.bank.name}}</p>
+                    <h3 class="primary--text">{{data.bank.debit}}</h3>
+                    <h3>{{data.bank.name}}</h3>
                     <br>
                     <v-btn
                         color="primary"
@@ -27,7 +27,7 @@
                         outlined
                         @click="doCopy"
                     >
-                        <p style="text-transform:none;font-size:12px;">Copy Rekening</p>
+                        <p class="vt-btn-text">Copy Rekening</p>
                     </v-btn>
                 </v-col>
                 <v-snackbar
@@ -92,7 +92,7 @@ export default {
         padding: 15%;
     }
     .vt-img{
-        width: 250px;
+        width: 300px;
         height: auto;
         float: right;
     }

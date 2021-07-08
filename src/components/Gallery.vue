@@ -29,12 +29,11 @@ export default {
                 type: 'loop',
                 pagination: false,
                 arrows: false,
-                cover: true,
-                heightRatio: 0.5,
+                heightRatio: 1,
                 focus: 'center',
                 breakpoints: {
                     720: {
-                        heightRatio: 1.2,
+                        heightRatio: 1.5,
                     }
                 }
 			},

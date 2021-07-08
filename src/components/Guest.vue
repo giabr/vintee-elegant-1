@@ -5,7 +5,7 @@
             <div data-aos="fade-in">
                 <p style="text-align:left" class="dark--text">Nama</p>
                 <v-text-field
-                class="font-text dark--text"
+                class="vt-field font-text dark--text"
                 v-model="name"
                 outlined
                 clearable
@@ -14,7 +14,7 @@
             <div data-aos="fade-in">
                 <p style="text-align:left" class="dark--text">Pesan</p>
                 <v-textarea
-                class="font-text dark--text"
+                class="vt-field font-text dark--text"
                 outlined
                 clearable
                 v-model="message"
@@ -35,7 +35,7 @@
             @click="postMessage()"
             elevation="0"
             >
-                <p style="text-transform:none;font-size:12px;">Kirim pesan</p>
+                <p class="vt-btn-text">Kirim pesan</p>
             </v-btn>
             <v-snackbar
             v-model="snackbar"
@@ -63,6 +63,7 @@
 
 import axios from 'axios'
 import {api, userid} from '../db'
+import io from 'socket.io-client';
 import MessageList from './MessageList.vue'
 
 export default {
@@ -73,7 +74,8 @@ export default {
             attend: true,
             guest: null,
             snackbar: false,
-            timeout: 5000
+            timeout: 5000,
+            socket: io('localhost:3001')
         }
     },
     components: {
@@ -99,7 +101,6 @@ export default {
             this.name = "tulis nama kamu disini...",
             this.message = "tulis pesan kamu disini...",
             this.snackbar = true
-            this.fetchPost()
         },
         fetchPost(){
             axios.get(api + `/api/guest/${userid}`)
@@ -108,8 +109,7 @@ export default {
 
     },
     mounted(){
-        axios.get(api + `/api/guest/${userid}`)
-        .then(response => (this.guest = response.data))
+        this.fetchPost()
     }
 }
 </script>
@@ -120,6 +120,9 @@ export default {
     padding: 10% 30%;
     .active{
         color: white;
+    }
+    .vt-field{
+        font-size: 20px;
     }
     .vt-select-left{
         border-style: solid;
@@ -137,6 +140,9 @@ export default {
     }
     @media screen and (max-width: 720px) {
     padding: 10% 5%;
+        .vt-field{
+        font-size: 16px;
+        }
     } 
 }
 

@@ -1,17 +1,15 @@
 <template>
     <div id="vt-footer" class="primary">
-        <v-container>
-            <v-row>
-                <v-col cols="6">
-                    <img class="vt-logo" src="../../assets/vintee-logo.png" />
-                </v-col>
-                <v-col cols="6" class="white--text vt-center">
-                    <div>
-                        <p>&copy; 2021 Vintee Collection.</p>
-                        <p>All rights reserved.</p>
-                    </div>
-                </v-col>
-            </v-row>
+        <v-container class="white--text text-center">
+            <p style="font-size:14px">Created with love by</p>
+            <br>
+            <br>
+            <img class="vt-logo" src="../../assets/vintee-logo.png" />
+            <br>
+            <div>
+                <p>&copy; 2021 <span class="secondary--text">Vintee</span> Collection.</p>
+                <p>All rights reserved.</p>
+            </div>
         </v-container>
     </div>
 </template>
@@ -25,27 +23,23 @@ export default {
 <style lang="scss" scoped>
 
 #vt-footer {
-    padding: 5% 0;
+    padding: 10% 0;
         .vt-logo{
             width: 200px;
             height: auto;
-            float: right;
-            margin-right: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 30px;
         }
         .vt-center{
             display: flex;
             align-items: center; /* align vertical */
-        }
-        p{
-            font-size: 24px;
+            text-align: right;
         }
         @media screen and (max-width: 720px) {
         .vt-logo{
-            width: 90px;
-            margin-right: 20px;
-        }
-        p{
-            font-size: 14px;
+            width: 45%;
         }
     }
 }

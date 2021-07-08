@@ -27,6 +27,7 @@ import Protocol from '../components/Protocol.vue'
 import Live from '../components/Live.vue'
 import Donate from '../components/Donate.vue'
 import Guest from '../components/Guest.vue'
+
 import Gallery from '../components/Gallery.vue'
 
 import Footer from '../components/Footer/Footer.vue'
@@ -65,8 +66,8 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lora:wght@400;700&display=swap');
 
-  h3, p {
-    font-size: 16px;
+  h3, p, a, span {
+    font-size: 18px;
   }
   p {
     margin-bottom: 0 !important;
@@ -88,16 +89,23 @@ export default {
   .vt-title{
     // text-transform: uppercase;
     font-family: 'Dancing Script', cursive;
-    font-size: 75px;
+    font-size: 60px;
     margin: 30px 0;
+  }
+  .vt-btn-text{
+    text-transform: none;
+    font-size: 16px;
   }
   @media screen and (max-width: 720px) {
     .vt-title {
-      font-size: 28px;
+      font-size: 32px;
       margin: 30px 0;
     }
-    h3, p {
-    font-size: 14px;
+    .vt-btn-text{
+      font-size: 14px;
+    }
+    h3, p, a, span {
+    font-size: 16px;
     }
   }
 </style>

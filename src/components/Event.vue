@@ -64,7 +64,7 @@ export default {
     .vt-btn{
         margin: 20px 0;
         span {
-            font-size:12px;
+            font-size:16px;
             text-transform:none;
             font-weight:bold;
             margin-left:5px;

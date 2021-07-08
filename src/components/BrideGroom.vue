@@ -52,12 +52,10 @@ export default {
 #vt-bridegroom{
     padding: 10% 0;
     p {
-        font-size: 14px;
         padding: 2% 0;
     }
     a {
         text-decoration: none;
-        font-size: 12px;
         margin: 0;
     }
     .vt-parent {

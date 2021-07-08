@@ -19,11 +19,14 @@
     "mongoose": "^5.13.0",
     "node-format-date": "^1.0.9",
     "slick-vuejs": "^1.0.9",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
     "vue": "^2.6.11",
     "vue-clipboard2": "^0.3.1",
     "vue-router": "^3.2.0",
     "vue-slick": "^1.1.16",
     "vue-slick-carousel": "^1.0.6",
+    "vue-socket.io": "^3.0.10",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {

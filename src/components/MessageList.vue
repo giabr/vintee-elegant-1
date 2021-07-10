@@ -3,17 +3,14 @@
         <v-container>
             <h1 data-aos="fade-in" class="vt-title text-center primary--text">Pesan</h1>
         <v-list class="vt-post-container" data-aos="fade-in">
-            <v-list-item v-for="(guest, index) in list" :key="index">
-                <v-list-item-content>
-                    <v-list-item-title>
-                        <span class="dark--text" style="font-weight:bold">{{guest.name}}</span><span class="primary--text" style="margin-left:10px" v-if="guest.attend">&#10003; Hadir</span>
-                    </v-list-item-title>
-                    <v-list-item-subtitle>
-                        <p class="dark--text">{{guest.message}}</p>
-                        <br>
-                    </v-list-item-subtitle>
-                </v-list-item-content>
-            </v-list-item>
+            <ul>
+                <li v-for="(guest, index) in list" :key="index">
+                    <div class="dark--text">
+                        <span style="font-weight:bold">{{guest.name}}</span><span class="primary--text vt-attend" v-if="guest.attend">&#10003; Hadir</span>
+                        <p>{{guest.message}}</p>
+                    </div>
+                </li>
+            </ul>
         </v-list>
         </v-container>
     </div>
@@ -33,10 +30,19 @@ export default {
 #vt-message-list{
     padding: 0;
     .vt-post-container {
-        max-height: 50vh;
+        max-height: 70vh;
         overflow-y: auto;
         background-color: transparent;
     }
+    ul{
+        list-style: none;
+        display: grid;
+        grid-gap: 1.5rem;
+    }
+    .vt-attend{
+        margin-left: 15px;
+    }
+
 }
 
 </style>

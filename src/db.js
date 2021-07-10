@@ -2,7 +2,7 @@
 // const api = 'http://localhost:3001'
 const api = 'https://vintee-be.herokuapp.com'
 
-const userid = '60dc9e80f2cb768208ee33d9'
+const userid = '60e9bc26e6bde200156b8933'
 
 module.exports = {
     api, userid

@@ -2,7 +2,7 @@
     <div id="vt-countdown">
         <v-container class="text-center primary--text">
             <h1 class="vt-title" data-aos="fade-in">{{formatDate(data)}}</h1>
-            <img class="vt-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
+            <img class="vt-img" src="../assets/images/decor/savethedate.svg" alt="" data-aos="fade-in">
             <vue-countdown :time="interval" v-slot="{ days, hours, minutes, seconds }">
                 <v-row class="vt-timer">
                     <v-col>
@@ -52,7 +52,7 @@ export default {
 
 #vt-countdown{
     padding: 10% 0;
-    background:url("../assets/bg-2.jpg");
+    background:url("../assets/images/bg-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

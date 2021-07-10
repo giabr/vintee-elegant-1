@@ -75,7 +75,8 @@ export default {
             guest: [],
             snackbar: false,
             timeout: 5000,
-            socket: io('localhost:4000', { transports: ['websocket', 'polling', 'flashsocket'] })
+            // socket: io(`localhost:3001`, { transports: ['websocket', 'polling', 'flashsocket'] })
+            socket: io(api, { transports: ['websocket', 'polling', 'flashsocket'] })
         }
     },
     components: {
@@ -131,7 +132,7 @@ export default {
 
 #vt-guest{
     padding: 10% 30%;
-    background:url("../assets/bg.jpg");
+    background:url("../assets/images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

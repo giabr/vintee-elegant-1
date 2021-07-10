@@ -5,15 +5,15 @@
             <v-row class="text-center">
                 <v-col cols="12" sm="12" md="5">
                     <div class="vt-parent" data-aos="fade-in">
-                        <img class="vt-img vt-circle vt-decor-back" :src="data.groom.imgUrl" alt="" srcset="">
-                        <img class="vt-img vt-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
+                        <img class="vt-img vt-circle vt-decor-back" src="../assets/images/groom.jpg" alt="" srcset="">
+                        <img class="vt-img vt-decor-front" src="../assets/images/decor/img-decor.svg" alt="" srcset="">
                     </div>
                     <div data-aos="fade-in">
                         <br>
                         <h3 class="primary--text">{{data.groom.fullname}}</h3>
                         <p class="dark--text">Putra dari Bapak {{data.groom.father}} &amp; Ibu {{data.groom.mother}}</p>
                         <div>
-                            <img class="vt-sosmed" src="../assets/ig.svg" alt="" srcset="">
+                            <img class="vt-sosmed" src="../assets/images/decor/ig.svg" alt="" srcset="">
                             <a :href="data.groom.socmed.link" target="_blank" class="primary--text"><span> {{data.groom.socmed.name}}</span></a>
                         </div>                    
                     </div>
@@ -21,15 +21,15 @@
                 <v-col data-aos="fade-in" class="vt-and font primary--text" cols="12" sm="12" md="2">&amp;</v-col>
                 <v-col cols="12" sm="12" md="5">
                     <div class="vt-parent" data-aos="fade-in">
-                        <img class="vt-img vt-circle vt-decor-back" :src="data.bride.imgUrl" alt="" srcset="">
-                        <img class="vt-img vt-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
+                        <img class="vt-img vt-circle vt-decor-back" src="../assets/images/bride.jpg" alt="" srcset="">
+                        <img class="vt-img vt-decor-front" src="../assets/images/decor/img-decor.svg" alt="" srcset="">
                     </div>
                     <div data-aos="fade-in">
                         <br>
                         <h3 class="primary--text">{{data.bride.fullname}}</h3>
                         <p class="dark--text">Putra dari Bapak {{data.bride.father}} &amp; Ibu {{data.bride.mother}}</p>
                         <div>
-                            <img class="vt-sosmed" src="../assets/ig.svg" alt="" srcset="">
+                            <img class="vt-sosmed" src="../assets/images/decor/ig.svg" alt="" srcset="">
                             <a :href="data.bride.socmed.link" target="_blank" class="primary--text"><span> {{data.bride.socmed.name}}</span></a>
                         </div>
                     </div>

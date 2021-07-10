@@ -10,8 +10,8 @@
       <v-card-text data-aos="fade-in" class="vh-center text-center dark--text">
 			<h1 class="vt-title">{{data.groom.nickname}} &amp; {{data.bride.nickname}}</h1>
       <div class="vt-parent" data-aos="fade-in">
-        <img class="vt-img vt-circle vt-decor-back" :src="data.cover" alt="" srcset="">
-        <img class="vt-img vt-decor-front" src="../assets/img-decor.svg" alt="" srcset="">
+        <img class="vt-img vt-circle vt-decor-back" src="../assets/images/img_bg_2.jpg" alt="" srcset="">
+        <img class="vt-img vt-decor-front" src="../assets/images/decor/img-decor.svg" alt="" srcset="">
       </div>
       <br>
       <br>
@@ -51,7 +51,7 @@ export default {
     methods: {
       playMusic(){
       var sound = new Howl({
-        src: [require('../assets/galihratna.ogg')],
+        src: [require('../assets/music/galihratna.ogg')],
         autoplay: true,
         loop: true,
         onend: function() {
@@ -67,7 +67,7 @@ export default {
 
 <style lang="scss" scoped>
     #vt-dialog{
-        background:url("../assets/bg.jpg");
+        background:url("../assets/images/bg.jpg");
         height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;

@@ -79,7 +79,7 @@ export default {
     .vt-intro{
         padding-top: 10%;
         padding-bottom: 5%;
-        background:url("../assets/bg.jpg");
+        background:url("../assets/images/bg.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;

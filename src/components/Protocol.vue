@@ -5,15 +5,15 @@
             <br>
             <v-row class="dark--text">
                 <v-col cols="4" data-aos="fade-in">
-                    <img src="../assets/soap.svg" alt="">
+                    <img src="../assets/images/decor/soap.svg" alt="">
                     <p>Cuci Tangan</p>
                 </v-col>
                 <v-col cols="4" data-aos="fade-in">
-                    <img src="../assets/social-distancing.svg" alt="">
+                    <img src="../assets/images/decor/social-distancing.svg" alt="">
                     <p>Jaga Jarak</p>
                 </v-col>
                 <v-col cols="4" data-aos="fade-in">
-                    <img src="../assets/protection-mask.svg" alt="">
+                    <img src="../assets/images/decor/protection-mask.svg" alt="">
                     <p>Pakai Masker</p>
                 </v-col>
             </v-row>

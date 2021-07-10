@@ -10,7 +10,7 @@
     <live-page :data="client.live" />
     <donate-page :data="client" />
     <guest-page />
-    <gallery-page :images="client.gallery" />
+    <gallery-page />
     <!-- footer -->
     <footer-page/>
   </div>

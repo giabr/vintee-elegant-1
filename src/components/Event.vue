@@ -14,7 +14,7 @@
                     color="primary"
                     outlined
                     >
-                    <img src="../assets/map.svg" alt="" srcset="">
+                    <img src="../assets/images/decor/map.svg" alt="" srcset="">
                     <a :href="data.place1.location.link" target="_blank"><span class="primary--text">Lihat peta</span></a>
                     </v-btn>
                 </v-col>
@@ -28,7 +28,7 @@
                     color="primary"
                     outlined
                     >
-                    <img src="../assets/map.svg" alt="" srcset="">
+                    <img src="../assets/images/decor/map.svg" alt="" srcset="">
                     <a :href="data.place2.location.link" target="_blank"><span class="primary--text">Lihat peta</span></a>
                     </v-btn>
                 </v-col>                
@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 #vt-event{
     padding: 10% 0;
-    background-image: url("../assets/event-decor.svg");
+    background-image: url("../assets/images/decor/event-decor.svg");
     background-position: right bottom;
     background-size: 20% auto;
     .vt-time{

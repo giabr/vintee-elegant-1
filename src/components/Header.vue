@@ -1,6 +1,5 @@
 <template>
-    <div id="vt-cover" v-bind:style="{
-        background:'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + data.cover + ')'}">
+    <div id="vt-cover">
         <v-container data-aos="fade-in">
             <div class="vt-cover-body text-center white--text">
                 <h3 style="font-weight: 400">The wedding of</h3>
@@ -30,6 +29,7 @@ export default {
 
 <style lang="scss" scoped>
     #vt-cover{
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/img_bg_2.jpg');
         background-size: cover !important;
         background-attachment: fixed;
         background-position: center !important;

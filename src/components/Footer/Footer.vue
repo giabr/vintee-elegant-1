@@ -4,7 +4,7 @@
             <p style="font-size:14px">Created with love by</p>
             <br>
             <br>
-            <img class="vt-logo" src="../../assets/vintee-logo.png" />
+            <img class="vt-logo" src="../../assets/images/vintee-logo.png" />
             <br>
             <div>
                 <p>&copy; 2021 <span class="secondary--text">Vintee</span> Collection.</p>

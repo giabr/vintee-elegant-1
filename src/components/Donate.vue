@@ -18,7 +18,7 @@
                     <img class="vt-img" :src="data.bank.imgUrl" alt="" srcset="">
                 </v-col>
                 <v-col cols="6">
-                    <h3 class="primary--text">{{data.bank.debit}}</h3>
+                    <h3>{{data.bank.debit}}</h3>
                     <h3>{{data.bank.name}}</h3>
                     <br>
                     <v-btn

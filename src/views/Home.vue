@@ -4,7 +4,7 @@
     <modal-page :data="client" :guest="guest" />   
     <quotes-page :data="client.quote" /> 
     <bride-groom-page :data="client" />
-    <countdown-page :data="client.hday" />
+    <countdown-page :data="client.hday" :interval="getInterval(client.hday)" />
     <event-page :data="client.event" />
     <protocol-page />
     <live-page :data="client.live" />
@@ -53,13 +53,98 @@ export default {
   },
   data(){
     return {
-      client: null,
-      guest: this.$route.params.guest
+      client: {
+        quote: {
+          words: '',
+          author: ''
+        },
+        hday: "",
+        cover: "",
+        groom: {
+          fullname: '',
+          nickname: '',
+          imgUrl: '',
+          father: '',
+          mother: '',
+          socmed: {
+            name: '',
+            link: ''
+          }
+        },
+        bride: {
+          fullname: '',
+          nickname: '',
+          imgUrl: '',
+          father: '',
+          mother: '',
+          socmed: {
+            name: '',
+            link: ''
+          }
+        },
+        event: {
+          place1:{
+            name: '',
+            time:{
+              date: '',
+              clock: ''
+            },
+            location: {
+              name: '',
+              street: '',
+              link: ''
+            }
+          },
+          place2:{
+            name: '',
+            time:{
+              date: '',
+              clock: ''
+            },
+            location: {
+              name: '',
+              street: '',
+              link: ''
+            }
+          }
+        },
+        live: {
+          socmed1:{
+            name: '',
+            type: 0,
+            link: ''
+          },
+          socmed2:{
+            name: '',
+            type: 0,
+            link: ''
+          }
+        },
+        gallery: [],
+        video: '',
+        bank: {
+          name: '',
+          imgUrl: '',
+          debit: 0
+        }
+      },
+      // client: {},
+      guest: this.$route.params.guest,
     }
+  },
+  methods: {
+      getInterval(hday){
+        var now = new Date().getTime()
+        var next = new Date(hday).getTime()
+        var interval = next - now
+        return interval !== 'Invalid Date' ? interval : null
+    },
   },
   mounted(){
     axios.get(api + `/api/user/${userid}`)
-    .then(response => (this.client = response.data))
+    .then(response => {
+      this.client = response.data
+      })
   }
 }
 </script>

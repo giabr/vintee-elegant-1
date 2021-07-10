@@ -1,11 +1,6 @@
 <template>
     <div id="vt-cover" v-bind:style="{
-        background:'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + data.cover + ')',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        height: '900px'
-        }">
+        background:'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + data.cover + ')'}">
         <v-container data-aos="fade-in">
             <div class="vt-cover-body text-center white--text">
                 <h3 style="font-weight: 400">The wedding of</h3>
@@ -25,7 +20,7 @@ export default {
     },
     methods: {
         getDate(date){
-            var temp = new Date(date)
+            var temp = Date.parse(date)
             var newDate = dateFormat(temp, "dd . mm . yy")
             return newDate
         }
@@ -35,6 +30,11 @@ export default {
 
 <style lang="scss" scoped>
     #vt-cover{
+        background-size: cover !important;
+        background-attachment: fixed;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        height: 100vh;
         h1{
         font-size: 75px;
         }

@@ -3,7 +3,7 @@
         <v-container class="text-center primary--text">
             <h1 class="vt-title" data-aos="fade-in">{{formatDate(data)}}</h1>
             <img class="vt-img" src="../assets/savethedate.svg" alt="" data-aos="fade-in">
-            <vue-countdown :time="getInterval(now, hday)" v-slot="{ days, hours, minutes, seconds }">
+            <vue-countdown :time="interval" v-slot="{ days, hours, minutes, seconds }">
                 <v-row class="vt-timer">
                     <v-col>
                         <h1>{{ days }}</h1>
@@ -32,20 +32,11 @@ import VueCountdown from '@chenfengyuan/vue-countdown';
 import formatDateIndo from 'node-format-date';
 
 export default {
-    data(){
-        return{
-            now: new Date(),
-            hday: new Date(this.data),
-        }
-    },
     props: {
-        data: String
+        data: String,
+        interval: Number
     },
     methods: {
-        getInterval(now, next){
-            var time = next - now
-            return time
-        },
         formatDate(date){
             return formatDateIndo.formatDate(date)
         }

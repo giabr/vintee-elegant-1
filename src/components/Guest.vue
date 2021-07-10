@@ -1,14 +1,14 @@
 <template>
-    <div id="vt-guest" class="grey">
+    <div id="vt-guest">
         <v-container class="text-center">
             <h1 class="vt-title primary--text text-center" data-aos="fade-in">Buku tamu</h1>
             <div data-aos="fade-in">
                 <p style="text-align:left" class="dark--text">Nama</p>
                 <v-text-field
                 class="vt-field font-text dark--text"
+                clearable
                 v-model="name"
                 outlined
-                clearable
                 ></v-text-field>
             </div>
             <div data-aos="fade-in">
@@ -72,10 +72,10 @@ export default {
             name: "tulis nama kamu disini...",
             message: "tulis pesan kamu disini...",
             attend: true,
-            guest: null,
+            guest: [],
             snackbar: false,
             timeout: 5000,
-            socket: io('localhost:3001')
+            socket: io('localhost:4000', { transports: ['websocket', 'polling', 'flashsocket'] })
         }
     },
     components: {
@@ -92,23 +92,36 @@ export default {
                 attend: this.attend,
                 user: userid
             })
-            .then(function(response){
+            .then(response => {
+                this.socket.emit('SEND_MESSAGE', {
+                    name: this.name,
+                    message: this.message,
+                    attend: this.attend,
+                    user: userid
+                })
                 console.log(response)
             })
-            .catch(function(error){
-                console.log(error)
-            })
-            this.name = "tulis nama kamu disini...",
-            this.message = "tulis pesan kamu disini...",
+
+            // this.name = "tulis nama kamu disini...",
+            // this.message = "tulis pesan kamu disini...",
             this.snackbar = true
         },
         fetchPost(){
             axios.get(api + `/api/guest/${userid}`)
-            .then(response => (this.guest = response.data))
-        }
-
+            .then(response => {
+                this.guest = response.data
+            })  
+            
+            this.socket.on('MESSAGE', (data) => {
+                // this.guest.push(data)
+                this.guest.unshift(data)
+            })
+        },
     },
-    mounted(){
+    // mounted(){
+    //     this.fetchPost()
+    // }
+    created(){
         this.fetchPost()
     }
 }
@@ -118,6 +131,10 @@ export default {
 
 #vt-guest{
     padding: 10% 30%;
+    background:url("../assets/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     .active{
         color: white;
     }

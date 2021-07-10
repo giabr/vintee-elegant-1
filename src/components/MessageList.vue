@@ -1,8 +1,8 @@
 <template>
-    <div id="vt-message-list" class="grey">
+    <div id="vt-message-list">
         <v-container>
             <h1 data-aos="fade-in" class="vt-title text-center primary--text">Pesan</h1>
-        <v-list class="vt-post-container grey" data-aos="fade-in">
+        <v-list class="vt-post-container" data-aos="fade-in">
             <v-list-item v-for="(guest, index) in list" :key="index">
                 <v-list-item-content>
                     <v-list-item-title>
@@ -10,6 +10,7 @@
                     </v-list-item-title>
                     <v-list-item-subtitle>
                         <p class="dark--text">{{guest.message}}</p>
+                        <br>
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -34,6 +35,7 @@ export default {
     .vt-post-container {
         max-height: 50vh;
         overflow-y: auto;
+        background-color: transparent;
     }
 }
 

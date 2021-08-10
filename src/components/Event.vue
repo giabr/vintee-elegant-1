@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 #vt-event{
     padding: 10% 0;
-    background-image: url("../assets/images/decor/event-decor.svg");
+    background-image: url("../assets/images/decor/right-bottom-decor.svg");
     background-position: right bottom;
     background-size: 20% auto;
     .vt-time{

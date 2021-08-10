@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 #vt-live{
     padding: 10% 0;
-    background-image: url("../assets/images/decor/live-decor.svg");
+    background-image: url("../assets/images/decor/left-top-decor.svg");
     background-position: left top;
     background-size: 20% auto;
     a {

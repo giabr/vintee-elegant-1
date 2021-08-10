@@ -15,7 +15,7 @@
             <br>
             <v-row data-aos="fade-in">
                 <v-col cols="6">
-                    <img class="vt-img" :src="data.bank.imgUrl" alt="" srcset="">
+                    <img class="vt-img" src="../assets/images/mandiri.png" alt="" srcset="">
                 </v-col>
                 <v-col cols="6">
                     <h3>{{data.bank.debit}}</h3>

@@ -1,16 +1,19 @@
 <template>
-    <div id="vt-gallery">
+    <div id="vt-gallery" class="grey">
         <v-container>
         <splide :options="primaryOptions" ref="primary">
-            <splide-slide v-for="slide in 9" :key="slide">
+            <splide-slide v-for="slide in 5" :key="slide">
             <img class="vt-img" :src="getImg(slide)">
             </splide-slide>
         </splide>
         <splide :options="secondaryOptions" ref="secondary">
-            <splide-slide v-for="slide in 9" :key="slide">
+            <splide-slide v-for="slide in 5" :key="slide">
             <img class="vt-img-thumbnail" :src="getImg(slide)">
             </splide-slide>
         </splide>
+        </v-container>
+        <v-container>
+            <iframe class="vt-frame" src="https://www.youtube.com/embed/-LLJ_Ywt1zE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </v-container>
     </div>
 </template>
@@ -26,7 +29,14 @@ export default {
                 type: 'loop',
                 pagination: false,
                 arrows: false,
+                height: 600,
                 focus: 'center',
+                cover: true,
+                breakpoints: {
+                    720: {
+                        height: 400
+                    }
+                }
 			},
             secondaryOptions: {
                 type: 'slide',
@@ -43,8 +53,8 @@ export default {
                 interval: 5000,
                 breakpoints: {
                     720: {
-                        fixedWidth: 130,
-                        fixedHeight: 78
+                        fixedWidth: 80,
+                        fixedHeight: 88
                     }
                 }
             }
@@ -71,8 +81,15 @@ export default {
         .vt-img{
             width: 100%;
         }
+        .vt-frame{
+            width: 100%;
+            height: 500px;
+        }
         @media screen and (max-width: 720px) {
             padding: 10% 5%;
+            .vt-frame{
+                height: 300px;
+            }
         }
     }
 </style>

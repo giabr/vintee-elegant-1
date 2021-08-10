@@ -1,7 +1,7 @@
 <template>
   <div>
     <head-page :data="client" />
-    <modal-page :data="client" :guest="guest" />   
+    <modal-page :groom="client.groom" :bride="client.bride" :guest="guest" />   
     <quotes-page :data="client.quote" /> 
     <bride-groom-page :data="client" />
     <countdown-page :data="client.hday" :interval="getInterval(client.hday)" />
@@ -11,6 +11,7 @@
     <donate-page :data="client" />
     <guest-page />
     <gallery-page />
+    <ending-page :groom="client.groom" :bride="client.bride" />
     <!-- footer -->
     <footer-page/>
   </div>
@@ -27,9 +28,8 @@ import Protocol from '../components/Protocol.vue'
 import Live from '../components/Live.vue'
 import Donate from '../components/Donate.vue'
 import Guest from '../components/Guest.vue'
-
+import Ending from '../components/Ending.vue'
 import Gallery from '../components/Gallery.vue'
-
 import Footer from '../components/Footer/Footer.vue'
 
 import axios from 'axios'
@@ -49,6 +49,7 @@ export default {
     DonatePage : Donate,
     GuestPage : Guest,
     GalleryPage : Gallery,
+    EndingPage : Ending,
     FooterPage: Footer
   },
   data(){
@@ -140,7 +141,7 @@ export default {
         return interval !== 'Invalid Date' ? interval : null
     },
   },
-  mounted(){
+  created(){
     axios.get(api + `/api/user/${userid}`)
     .then(response => {
       this.client = response.data
